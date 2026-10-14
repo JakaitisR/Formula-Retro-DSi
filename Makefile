@@ -32,7 +32,7 @@ CXXFLAGS := $(CFLAGS) -fno-rtti -fno-exceptions
 ASFLAGS := -g $(ARCH)
 LDFLAGS := -g $(ARCH) -Wl,-Map,$(notdir $*.map)
 
-LIBS := -lnds9
+LIBS := -lnds9 -lcalico
 LIBDIRS := $(LIBNDS)
 
 ifneq ($(BUILD),$(notdir $(CURDIR)))
