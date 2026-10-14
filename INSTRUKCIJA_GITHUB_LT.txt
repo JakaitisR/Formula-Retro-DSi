@@ -1,0 +1,13 @@
+FORMULA RETRO - KOMPILIAVIMAS GITHUB (be programu diegimo Mac)
+
+1. Eik i https://github.com/new ir sukurk PUBLIC repository pavadinimu Formula-Retro-DSi, be README (Add README OFF). Spausk Create repository.
+2. Repo puslapyje rinkis 'uploading an existing file' (arba Add file -> Upload files).
+3. Mac Finder isarchyvuok ZIP. Ikelk Makefile ir source/main.c (perkelk aplanka source kartu su Makefile). Spausk Commit changes.
+4. GitHub repo virsuje pasirink Add file -> Create new file. Failo pavadinimo laukelyje irasyk .github/workflows/build.yml. Nukopijuok visa build.yml teksta is isarchyvuoto archyvo i redaktoriu, spausk Commit changes.
+5. Eik i Actions -> Build Nintendo DS game -> Run workflow (jei reikia) -> Run workflow.
+6. Atsidaryk naujausia paleidima. Jei zalias varnele, apacioje Artifacts spausk Formula_Retro_NDS. Parsisius ZIP, isarchyvuok formula_retro.nds.
+7. Nukopijuok formula_retro.nds i R4 microSD. Neliesk esamu R4 sisteminiu failu.
+
+PASTABA: Tai pirminis prototipas. GitHub kompiliavimas ir paleidimas tikroje konsoleje dar nepatikrinti. Jei Actions raudonas X, atidaryk Build NDS ROM ir nukopijuok klaida.
+
+Saugumas: public repo atskleidzia zaidimo koda. Nenaudok privaciu failu/slaptazodziu.
