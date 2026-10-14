@@ -1,0 +1,30 @@
+
+name: Build Formula Retro
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: devkitpro/devkitarm:latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compile
+        run: |
+          export DEVKITPRO=/opt/devkitpro
+          export DEVKITARM=$DEVKITPRO/devkitARM
+          export PATH=$DEVKITARM/bin:$PATH
+          make
+
+      - name: Upload game
+        uses: actions/upload-artifact@v4
+        with:
+          name: Formula-Retro-DSi
+          path: "*.nds"
